@@ -1,0 +1,22 @@
+{
+	"data": 10-07-2020,
+	"valor": 120.50,
+	"empresa_api_key": "gsrujdgetsahsd",
+	"cliente": {
+		"codigo_unico": "fsrgagfsregaf",
+		"nome": "Fulano de Tal",
+		"cpf": null,
+		"cnpj": null
+	},
+	"tipo_lancamento_financeiro": "???",
+	"cartao": {
+		"nome": "Visa Cielo",
+		"operacao": "Débito",
+		"bandeira": "Visa",
+		"administradora": "Cielo"
+	}
+}
+
+
+-->> Usar cliente "Consumidor Final" em casos não identificados.
+
