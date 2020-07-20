@@ -6,7 +6,7 @@
 	"nr_documento": 4444,
 	"dinheiro": 120.50,
 	"cheque": 120.50,
-	"cartao": 120.50, --Quando for dois cartões, vão precisar ler da vendastef e enviar N vezes a venda
+	"cartao": 120.50, //Quando for dois cartões, vão precisar ler da vendastef e enviar N vezes a venda
 	"aprazo": 120.50,
 	"convenio": 120.50,
 	"outros": 120.50,
@@ -33,7 +33,7 @@
 		"bandeira": "Visa",
 		"adquirente": "Cielo",
 		"nsu": 1111111
-	}
+	},
 	"cheque": {
 		"codigo_banco": 237,
 		"Agencia": 455,
@@ -43,11 +43,11 @@
 		"titutal": "Anderson,
 		"data_cheque": 10-07-2020,
 		"bom_para": null
-	}
-	"pbm": "FARMACIA_POPULAR"
-	"recebimentos_crediario": [{
-		"cupom": 123
-	}]
+	},
+	"pbm": "FARMACIA_POPULAR",
+	"recebimentos_crediario": [
+		{"cupom": 123}
+	]
 }
 
 -->> Usar cliente "Consumidor Final" em casos não identificados.
