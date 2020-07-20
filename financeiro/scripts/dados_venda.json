@@ -1,22 +1,104 @@
 {
 	"data": 10-07-2020,
-	"valor": 120.50,
+	"hora": 12:12:00,
+	"ecf": 65,
+	"serie":1,
+	"nr_documento": 4444,
+	"dinheiro": 120.50,
+	"cheque": 120.50,
+	"cartao": 120.50, --Quando for dois cartões, vão precisar ler da vendastef e enviar N vezes a venda
+	"aprazo": 120.50,
+	"convenio": 120.50,
+	"outros": 120.50,
+	"pgto_credito": 555,
+	"vencimento": 10-07-2020,
+	"nr_caixa": 444;
 	"empresa_api_key": "gsrujdgetsahsd",
+	"convenio": {
+		"cnpj_cpf": "00000",
+		"nome": "EmpresaTal",
+	}, 
 	"cliente": {
 		"codigo_unico": "fsrgagfsregaf",
 		"nome": "Fulano de Tal",
 		"cpf": null,
-		"cnpj": null
+		"cnpj": null,
+		"telefone": null
 	},
 	"tipo_lancamento_financeiro": "???",
+	"numero_parcelas": 3,
 	"cartao": {
 		"nome": "Visa Cielo",
 		"operacao": "Débito",
 		"bandeira": "Visa",
-		"administradora": "Cielo"
+		"adquirente": "Cielo",
+		"nsu": 1111111
 	}
+	"cheque": {
+		"codigo_banco": 237,
+		"Agencia": 455,
+		"numero_conta": 123,
+		"numero_cheque": 1211,
+		"numero_serie": 444,
+		"titutal": "Anderson,
+		"data_cheque": 10-07-2020,
+		"bom_para": null
+	}
+	"pbm": "FARMACIA_POPULAR"
+	"recebimentos_crediario": [{
+		"cupom": 123
+	}]
 }
-
 
 -->> Usar cliente "Consumidor Final" em casos não identificados.
 
+Caixa
+	Nr_caixa
+	empresa_api_key
+	Data Inicial
+	Hora Inicial
+	Valor Inicial
+	Data Final
+	Hora Final
+	Valor Final
+	Dinheiro
+	Troco
+	Nome do Operador de caixa
+
+-- O registro de abertura e fechamento de caixa é o mesmo? - É um que é atualizado.. tabela controledecaixa
+-- O que é o Int na conferência de caixa / Convênio
+
+Conta_a_pagar (Entradas de notas)
+
+
+
+
+CAIXA.LANCAMEN
+VV	VENDA A VISTA	C
+VC	VENDA POR CONVENIO	C
+VR	VENDA POR CREDIARIO	C
+CV	CANCELAMENTO VENDA	0
+AC	ABERTURA DE CAIXA	0
+FC	FECHAMENTO DE CAIXA	0
+SA	SANGRIA DE CAIXA	D
+SU	SUPRIMENTO DE CAIXA	C
+RC	RECEBIMENTO CONVENIO	C - RECARGA CELULAR
+VP	VENDA A PRAZO	C
+TV	TELE-VENDA	C
+PG	PAGAMENTO DE CONTA	C
+DV	DEVOLUCAO DE VENDA	D
+DF	DEVOLUCAO DE COMPRA	0
+CC	CUPOM CANCELADO	0
+CP	CHEQUE PRE	C
+CH	CHEQUE	C
+CR	CARTAO	C
+AU	AUTENTICACAO	0
+TS	TRANS SAIDA	D
+TE	TRANS ENTRADA	C
+DC	DEVOLUCAO CONVENIO	0
+DP	DEVOLUCAO A PRAZO	0
+CI	CANCELAMENTO ITEM	0
+PB	PAGAMENTO BANCARIO	C
+EX	EXTORNOS	D
+
+LANCAMEN = 'PG'-- Recebimento Prazo / Convênio
