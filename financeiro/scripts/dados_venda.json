@@ -4,16 +4,22 @@
 	"ecf": 65,
 	"serie":1,
 	"nr_documento": 4444,
+	"nr_venda": 123, //É necessário para realizar as ligações de teleentrega (lancamen TV)
 	"dinheiro": 120.50,
 	"cheque": 120.50,
 	"cartao": 120.50, //Quando for dois cartões, vão precisar ler da vendastef e enviar N vezes a venda
 	"aprazo": 120.50,
 	"convenio": 120.50,
 	"outros": 120.50,
+	"boleto": 110.99,
 	"pgto_credito": 555,
+	"teleentrega": "SIM", //Vinculado ao lancame TV (referente ao acerto com o entregador).
 	"vencimento": 10-07-2020,
-	"nr_caixa": 444;
+	"nr_caixa": 444,
+	"caixa_retorno": 123, //Campo originado na tabela ENTREGAS. Se o nr_caixa for diferente do caixa_retorno, este valor não poderá ser esperado no caixa de origem.
 	"empresa_api_key": "gsrujdgetsahsd",
+	"motivo_sangria_suprimento": "SANGRIA",
+	"destino_sangria_suprimento": "Pagamento",
 	"convenio": {
 		"cnpj_cpf": "00000",
 		"nome": "EmpresaTal",
@@ -67,6 +73,7 @@ Caixa
 
 -- O registro de abertura e fechamento de caixa é o mesmo? - É um que é atualizado.. tabela controledecaixa
 -- O que é o Int na conferência de caixa / Convênio
+-- A sangria, quando for do tipo Pagamento, vai gerar um movimento financeiro não conciliado (conciliação posterior).
 
 Conta_a_pagar (Entradas de notas)
 
@@ -86,7 +93,7 @@ RC	RECEBIMENTO CONVENIO	C - RECARGA CELULAR
 VP	VENDA A PRAZO	C
 TV	TELE-VENDA	C
 PG	PAGAMENTO DE CONTA	C
-DV	DEVOLUCAO DE VENDA	D
+DV	DEVOLUCAO DE VENDA VISTA	D
 DF	DEVOLUCAO DE COMPRA	0
 CC	CUPOM CANCELADO	0
 CP	CHEQUE PRE	C
